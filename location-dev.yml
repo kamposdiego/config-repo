@@ -16,7 +16,7 @@ spring:
   cloud:
     stream:
       binder:
-        brokers: kafka:29092
+        brokers: kafka:9092
       bindings:
         producer-out-0:
           destination: new-location-country
