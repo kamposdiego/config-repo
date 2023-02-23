@@ -18,7 +18,7 @@ spring:
       definition: producer
     stream:
       binder:
-        brokers: 192.168.1.249:29092
+        brokers: kafka:29092
       bindings:
         producer-out-0:
           destination: new-location-country
