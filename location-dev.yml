@@ -4,6 +4,13 @@ spring:
   jpa:
     database: POSTGRESQL
     show-sql: true
+  cloud:
+    stream:
+      binder:
+        brokers: kafka:9092
+      bindings:
+        producer-out-0:
+          destination: new-location-country
   datasource:
     driverClassName: org.postgresql.Driver
     url: jdbc:postgresql://192.168.1.249:5432/senatus_web
@@ -13,10 +20,4 @@ spring:
     hikari:
       connectionTimeout: 20000
       maximumPoolSize: 5
-  cloud:
-    stream:
-      binder:
-        brokers: kafka:9092
-      bindings:
-        producer-out-0:
-          destination: new-location-country
+  
