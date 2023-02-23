@@ -14,8 +14,6 @@ spring:
       connectionTimeout: 20000
       maximumPoolSize: 5
   cloud:
-    function:
-      definition: producer
     stream:
       binder:
         brokers: kafka:29092
