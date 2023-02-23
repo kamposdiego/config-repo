@@ -1,0 +1,23 @@
+spring:
+  profiles: development
+  ## RabbitMQ
+  rabbitmq:
+    listener:
+      simple:
+        default-requeue-rejected: false
+server:
+  shutdown: graceful
+## Management
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: env, health, info, loggers, metrics
+## Eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://senatus-eureka-server:8761/eureka/

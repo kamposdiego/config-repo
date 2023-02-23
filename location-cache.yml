@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: location-cache
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+  cloud:
+    function:
+      definition: consumer
+    stream:
+      binder:
+        brokers: 127.0.0.1:9092
+      bindings:
+        consumer-in-0:
+          destination: new-location-country
+          group: location-cache

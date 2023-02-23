@@ -1,0 +1,15 @@
+server:
+  port: 8183
+spring:
+  profiles: development
+## Neo4J
+  neo4j:
+    uri: bolt://senatus-neo4j-server
+    authentication:
+      username: neo4j
+      password: neo4JPasswd
+## RabbitMQ
+  rabbitmq:
+    host: senatus-rabbit-server
+    username: country-graphdb
+    password: country-graphdb

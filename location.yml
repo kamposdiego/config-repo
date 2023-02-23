@@ -1,0 +1,24 @@
+server:
+  port: 8180
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://192.168.1.249:5432/senatus_web
+    username: postgres
+    password: postgresqlpwd
+    platform: postgres
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+  cloud:
+    function:
+      definition: producer
+    stream:
+      binder:
+        brokers: 192.168.1.249:9092
+      bindings:
+        producer-out-0:
+          destination: new-location-country
