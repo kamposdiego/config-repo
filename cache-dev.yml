@@ -2,15 +2,20 @@ server:
   port: 8181
 spring:
   cloud:
+    function:
+      definition: consumer
     stream:
       kafka:
+        bindings:
+          consumer-in-0:
+            consumer:
         binder:
           brokers: broker
           defaultBrokerPort: 9092
-          autoCreateTopics: true
-        bindings:
-          consumer-in-0:
-            destination: new-location-country
+          autoCreateTopics: true            
+      bindings:
+        consumer-in-0:
+            destination : new-location-country
             group: cache
   redis:
     host: redis-service
