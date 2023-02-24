@@ -14,7 +14,6 @@ spring:
         consumer-in-0:
           group: cache
           destination: new-location-country
-  
   redis:
     host: redis-service
     port: 6379
