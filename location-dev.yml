@@ -12,7 +12,7 @@ spring:
           defaultBrokerPort: 9092
           autoCreateTopics: true
       bindings:
-        producer-in-0:
+        producer-out-0:
           group: location-app
           destination: new-location-country
   datasource:
