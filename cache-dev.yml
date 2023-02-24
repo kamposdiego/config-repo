@@ -12,8 +12,8 @@ spring:
           autoCreateTopics: true
       bindings:
         consumer-in-0:
-          group: eventin
-          destination: event
+          group: cache
+          destination: new-location-country
   
   redis:
     host: redis-service
