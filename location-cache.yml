@@ -1,6 +1,6 @@
+server:
+  port: 8181
 spring:
-  application:
-    name: location-cache
   redis:
     host: localhost
     port: 6379
@@ -9,9 +9,12 @@ spring:
     function:
       definition: consumer
     stream:
-      binder:
-        brokers: 127.0.0.1:9092
-      bindings:
-        consumer-in-0:
+      kafka:
+        binder:
+          brokers: broker
+          defaultBrokerPort: 9092
+          autoCreateTopics: true
+        bindings:
+          consumer-in-0:
           destination: new-location-country
           group: location-cache
