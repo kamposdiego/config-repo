@@ -20,4 +20,4 @@ spring:
         bindings:
           consumer-in-0:
           destination: new-location-country
-          group: location-cache
+          group: cache
