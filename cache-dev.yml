@@ -1,17 +1,18 @@
 server:
   port: 8181
 spring:
-  redis:
-    host: redis-service
-    port: 6379
-    database: 0
-    timeout: 60000
-    lettuce:
-      pool:
-        max-active: 8
-        max-idle: 8
-        max-wait: -1
-        min-idle: 0    
+  data:
+    redis:
+      host: redis-service
+      port: 6379
+      database: 0
+      timeout: 60000
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          max-wait: -1
+          min-idle: 0 
   cloud:
     function:
       definition: consumer
