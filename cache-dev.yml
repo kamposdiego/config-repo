@@ -10,10 +10,10 @@ spring:
           brokers: broker
           defaultBrokerPort: 9092
           autoCreateTopics: true
-        bindings:
-          consumer-in-0:
-            destination: new-location-country
-            group: cache
+      bindings:
+        consumer-in-0:
+          group: eventin
+          destination: event
   
   redis:
     host: redis-service
