@@ -21,7 +21,7 @@ spring:
           brokers: broker
           defaultBrokerPort: 9092
           autoCreateTopics: true
-      bindings:
-        consumer-in-0:
-          group: cache
-          destination: new-location-country
+    bindings:
+      consumer-in-0:
+        group: cache
+        destination: new-location-country
