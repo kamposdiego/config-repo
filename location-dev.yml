@@ -11,9 +11,10 @@ spring:
           brokers: broker
           defaultBrokerPort: 9092
           autoCreateTopics: true
-        bindings:
-          producer-out-0:
-            destination: new-location-country
+      bindings:
+        producer-in-0:
+          group: location-app
+          destination: new-location-country
   datasource:
     driverClassName: org.postgresql.Driver
     url: jdbc:postgresql://postgresql-service:5432/senatus_web
