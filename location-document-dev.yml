@@ -1,0 +1,21 @@
+server:
+  port: 8181
+spring:
+  data:
+    mongodb:
+      host: mongo-service
+      port: 27017
+      database: mydatabase
+  cloud:
+    function:
+      definition: consumer
+    stream:
+      kafka:
+        binder:
+          brokers: broker
+          defaultBrokerPort: 9092
+          autoCreateTopics: true
+      bindings:
+        consumer-in-0:
+          group: location-document
+          destination: new-location-country
