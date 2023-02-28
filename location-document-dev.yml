@@ -5,14 +5,14 @@ spring:
     mongodb:
       host: mongo-service.database
       port: 27017
-      database: mydatabase
+      database: location-document-tst
   cloud:
     function:
       definition: consumer
     stream:
       kafka:
         binder:
-          brokers: broker
+          brokers: broker.message
           defaultBrokerPort: 9092
           autoCreateTopics: true
       bindings:
