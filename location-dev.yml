@@ -8,7 +8,7 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: broker
+          brokers: broker.message
           defaultBrokerPort: 9092
           autoCreateTopics: true
       bindings:
@@ -17,7 +17,7 @@ spring:
           destination: new-location-country
   datasource:
     driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://postgresql-service:5432/senatus_web
+    url: jdbc:postgresql://postgresql-service.database:5432/senatus_web
     username: postgres
     password: postgresqlpwd
     platform: postgres
