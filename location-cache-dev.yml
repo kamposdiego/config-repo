@@ -3,7 +3,7 @@ server:
 spring:
   data:
     redis:
-      host: redis-service
+      host: redis-service.database
       port: 6379
       database: 0
       timeout: 60000
