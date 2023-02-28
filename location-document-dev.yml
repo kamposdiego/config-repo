@@ -3,7 +3,7 @@ server:
 spring:
   data:
     mongodb:
-      host: mongo-service
+      host: mongo-service.database
       port: 27017
       database: mydatabase
   cloud:
