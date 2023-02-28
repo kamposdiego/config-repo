@@ -19,7 +19,7 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: broker
+          brokers: broker.message
           defaultBrokerPort: 9092
           autoCreateTopics: true
       bindings:
