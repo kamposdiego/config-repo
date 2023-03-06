@@ -3,7 +3,7 @@ server:
 spring:
   data:
     mongodb:
-      host: mongo-service.database
+      host: mongo-service
       port: 27017
       database: location-document-tst
   cloud:
@@ -12,7 +12,7 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: broker.message
+          brokers: broker
           defaultBrokerPort: 9092
           autoCreateTopics: true
       bindings:
