@@ -3,7 +3,7 @@ server:
 spring:
   data:
     redis:
-      host: redis-service.database
+      host: redis-service
       port: 6379
       database: 0
       timeout: 60000
@@ -19,7 +19,7 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: broker.message
+          brokers: broker
           defaultBrokerPort: 9092
           autoCreateTopics: true
       bindings:
