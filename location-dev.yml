@@ -1,5 +1,7 @@
 server:
   port: 8180
+  servlet:
+    context-path: /v1/api
 spring:
   jpa:
     database: POSTGRESQL
