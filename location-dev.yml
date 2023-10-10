@@ -16,7 +16,7 @@ spring:
           group: location-app
           destination: new-location-country
   datasource:
-    driverClassName: org.postgresql.Driver
+    driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://postgresql-service:5432/senatus_web
     username: postgres
     password: postgresqlpwd
