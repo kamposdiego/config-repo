@@ -34,3 +34,16 @@ spring:
         default-page-size: 20
         one-indexed-parameters: false
         max-page-size: 2000
+resilience4j:
+  ratelimiter:
+    metrics:
+      enabled: true
+    instances:
+      rateLimiterApi:
+        register-health-indicator: true
+        limit-for-period: 30
+        limit-refresh-period: 60s
+        timeout-duration: 0s
+        allow-health-indicator-to-fail: true
+        subscribe-for-events: true
+        event-consumer-buffer-size: 50
