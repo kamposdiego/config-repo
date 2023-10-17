@@ -8,6 +8,10 @@ spring:
     database: POSTGRESQL
     show-sql: true
     properties:
+      jakarta:
+        persistence:
+          sharedCache:
+            mode: UNSPECIFIED
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
   cloud:
