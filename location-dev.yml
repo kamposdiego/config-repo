@@ -4,7 +4,7 @@ server:
     context-path: /v1/api
 spring:
   jpa:
-    open-in-view: true
+    open-in-view: false
     database: POSTGRESQL
     show-sql: true
     properties:
