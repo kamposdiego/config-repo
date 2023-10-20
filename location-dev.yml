@@ -29,6 +29,9 @@ spring:
     database: POSTGRESQL
     show-sql: true
     properties:
+      hibernate:
+        jdbc:
+          batch_size: 250
       jakarta:
         persistence:
           sharedCache:
@@ -54,7 +57,8 @@ spring:
     platform: postgres
     hikari:
       connectionTimeout: 20000
-      maximumPoolSize: 5
+      minimum-idle: 5
+      maximumPoolSize: 10
   data:
     web:
       pageable:
