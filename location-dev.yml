@@ -81,3 +81,12 @@ resilience4j:
         allow-health-indicator-to-fail: true
         subscribe-for-events: true
         event-consumer-buffer-size: 50
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
