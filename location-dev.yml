@@ -29,7 +29,6 @@ spring:
     database: POSTGRESQL
     show-sql: true
     properties:
-      hibernate:
       jakarta:
         persistence:
           sharedCache:
