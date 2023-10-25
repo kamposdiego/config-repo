@@ -38,6 +38,7 @@ spring:
             mode: UNSPECIFIED
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
   cloud:
     stream:
       kafka:
